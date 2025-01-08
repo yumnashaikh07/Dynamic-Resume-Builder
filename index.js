@@ -4,7 +4,7 @@ var resumeOutput = document.getElementById('resume-output');
 var resumeContainer = document.querySelector('.resume-container'); // Added reference to the resume container
 resumeContainer.style.display = 'none';
 var handleFormSubmit = function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
     var name = document.getElementById('name').value;
     var title = document.getElementById('title').value;
     var email = document.getElementById('email').value;
@@ -27,24 +27,3 @@ var handleFormSubmit = function (event) {
     resumeContainer.style.display = 'block';
 };
 form.addEventListener('submit', handleFormSubmit);
-// const photoInput = document.getElementById("photo") as HTMLInputElement
-// const photofile = photoInput.files? photoInput.files[0]:null;
-// let photoBase64 = '';
-// if(photofile){
-//     photoBase64 = await filetoBase64(photofile);
-//     localStorage.setItem ("resumephoto" , photoBase64)
-//     resumephoto.src = photoBase64
-// }
-// function filetoBase64(file:File) : Promise<string>{
-//     return new Promise ((resolve , reject ) => {
-//         const reader= new FileReader ();
-//         reader.onloadend=()=> resolve(
-//             reader.result as string
-//         )
-//         reader.onerror = reject
-//         reader.readAsDataURL(file);
-//     });
-//     const savephoto = localStorage.getItem('resumephoto')
-//     if(savephoto){
-//         resumephoto.src = savephoto;
-//     }}
